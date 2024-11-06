@@ -1,0 +1,83 @@
+
+
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button 
+        type="button" 
+        class="btn btn-secondary" 
+        [ngClass]="{'btn-danger': activeButton === 'hourly'}" 
+        (click)="onClick('hourly')" 
+        routerLinkActive="active">Hourly
+    </button>
+    <button 
+        type="button" 
+        class="btn btn-secondary" 
+        [ngClass]="{'btn-danger': activeButton === 'packages'}" 
+        (click)="onClick('packages')">Packages
+    </button>
+    <button 
+        type="button" 
+        class="btn btn-secondary" 
+        [ngClass]="{'btn-danger': activeButton === 'monthly'}" 
+        (click)="onClick('monthly')">Monthly
+    </button>
+</div>
+
+
+ 
+<div [ngSwitch]="activeButton" >
+<div class="card-container" *ngSwitchCase="'hourly'" >
+    <div class="card  mb-3" style="max-width: 18rem;" *ngFor="let offer of ourOffers ; let i = index" >
+      <div class="card-header  ">{{offer.cardTitle}}</div>
+      <div class="card-body ">
+        <p class="card-text">{{offer.cardDescription}}</p>
+        <p class="card-text capacity-info">{{offer.cardCapacity}}</p>
+
+      </div>
+      <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle != 'Virtual Rental Contract'">{{offer.cardFooter}}</div>
+      <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle == 'Virtual Rental Contract'">{{offer.cardFooter}}<span> Per Year</span>  </div>
+  
+    </div>
+
+  </div>
+
+    <div class="card-container" *ngSwitchCase="'packages'" >
+        <div class="card  mb-3" style="max-width: 18rem;" *ngFor="let offer of ourDailyOffers ; let i = index">
+          <div class="card-header  ">{{offer.cardTitle}}</div>
+          <div class="card-body ">
+            <p class="card-text">{{offer.cardDescription}}</p>
+            <p class="card-text capacity-info">{{offer.cardCapacity}}</p>
+
+          </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle != 'Virtual Rental Contract'">{{offer.cardFooter}}<span> 100 Hours</span>  </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle == 'Virtual Rental Contract'">{{offer.cardFooter}}<span> Per Year</span>  </div>
+      
+        </div>
+      </div>
+      <div class="card-container" *ngSwitchCase="'monthly'" >
+        <div class="card  mb-3" style="max-width: 18rem;" *ngFor="let offer of ourMonthlyOffers ; let i = index">
+          <div class="card-header  ">{{offer.cardTitle}}</div>
+          <div class="card-body ">
+            <p class="card-text">{{offer.cardDescription}}</p>
+            <p class="card-text capacity-info">{{offer.cardCapacity}}</p>
+
+          </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle != 'Virtual Rental Contract'">{{offer.cardFooter}}  </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle == 'Virtual Rental Contract'">{{offer.cardFooter}}<span> Per Year</span>  </div>
+      
+        </div>
+      </div>
+
+      <div class="card-container" *ngSwitchDefault="'hourly'" >
+        <div class="card  mb-3" style="max-width: 18rem;" *ngFor="let offer of ourOffers ; let i = index">
+          <div class="card-header  ">{{offer.cardTitle}}</div>
+          <div class="card-body ">
+            <p class="card-text">{{offer.cardDescription}}</p>
+            <p class="card-text capacity-info">{{offer.cardCapacity}}</p>
+          </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle != 'Virtual Rental Contract'">{{offer.cardFooter}} </div>
+          <div class="card-footer bg-transparent border-success" *ngIf=" offer.cardTitle == 'Virtual Rental Contract'">{{offer.cardFooter}}<span> Per Year</span>  </div>
+      
+        </div>
+      </div>
+    </div>

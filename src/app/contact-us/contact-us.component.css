@@ -1,0 +1,84 @@
+.contact-us-container h1
+{
+  text-align: center;
+  font-size: 80px;
+  font-weight: 700;
+  margin-top: 3%;
+  color: #f3ba2b;
+}
+.card 
+{
+    background-color: black;
+    height: 300px;
+    margin-top: 50px;
+}
+img
+{
+ height: 150px;
+ width: 50%;
+}
+.card-body
+{
+    text-align: center;
+    color: aliceblue;
+}
+
+svg{
+    margin-left: 40%;
+    margin-top: 3%;
+}
+h5{
+    font-size: 25px;
+    font-weight: 600;
+}
+.card-text{
+    font-size: 23px;
+}
+.card-text a{
+    color:aliceblue;
+    text-decoration: none;
+}
+iframe
+{
+width: 50%;
+height: 50px;
+}
+@media (max-width: 1024px) {
+   svg
+   {
+
+    width: 70px;
+    height: 70px;
+    margin-left: 60px;
+    position: relative;
+    top: 25px;
+       } 
+   .card-group{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+   }
+   .card-body
+   {
+    position: relative;
+    top: -30px;
+   }
+   
+  }
+  
+  
+  @media  only screen and   (max-width: 768px) {
+    svg
+    {
+       margin-left: 150px;
+    }
+    .card-body
+    {
+     position: relative;
+     top: 30px;
+    }
+    .card-text{
+        font-size: 17px;
+    }
+  }

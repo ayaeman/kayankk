@@ -1,0 +1,43 @@
+.carousel-inner img{
+    height: 700px;
+    width: 50%;
+    margin-left: 40px;
+}
+div.container img{
+    height: 500px;
+    width: 80%;
+    border-radius: 30px;
+}
+.card{
+    border: transparent;
+    
+    
+}
+.text-end
+{
+    position: relative;
+    left: 7%;
+    margin-top: 7%;
+}
+.btn{
+    background-color:#f3ba2b ;
+
+}
+@media  only screen and   (max-width: 1025px) 
+{
+    .text-end
+    {
+        position: relative;
+        left: -10%;
+        margin-top: 7%;
+    }
+}
+@media  only screen and   (max-width: 768px) 
+{
+    .text-end
+    {
+        position: relative;
+        left: 25%;
+        margin-top: 7%;
+    }
+}

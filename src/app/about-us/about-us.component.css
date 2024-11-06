@@ -1,0 +1,59 @@
+.about-us {
+    text-align: center;
+    margin-top: 70px;
+    /* height: 30px; */
+    margin-left: -28%;
+}
+b{
+    color: #f3ba2b;
+}
+h4{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+.aboutus-text
+{
+   margin-top: 40px;
+   margin-left: -20px;
+   margin-bottom: 5%;
+}
+
+
+
+  .card-group{
+    position: absolute;
+    top: 65%;
+  }
+  
+.card img
+{
+  border-radius: 210px;
+  border: 8px solid #f3ba2b;
+  margin-top: 7%;
+}
+.card
+{
+  width: 50%;
+  position: relative;
+  left: 30%;
+  border: transparent;
+}
+@media  only screen and   (max-width: 1247px) 
+{
+  .aboutus-text
+{
+   margin-top: 60px;
+   margin-left: 17px;
+   margin-bottom: 10%;
+}
+}
+@media  only screen and   (max-width: 768px) 
+{
+  .aboutus-text
+{
+   margin-top: 60px;
+   margin-left: 12px;
+   margin-bottom: 10%;
+}
+}
